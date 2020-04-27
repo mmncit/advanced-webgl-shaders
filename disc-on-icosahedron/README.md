@@ -1,0 +1,1 @@
+![](disc-on-icosahedron.png)
