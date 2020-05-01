@@ -100,7 +100,7 @@ const sketch = ({ context }) => {
     uniform vec3 color;
     
     void main(){
-      gl_FragColor = texture2D(texture1, vUv);
+        gl_FragColor = texture2D(texture1, vUv) + vec4(color, 1.0);
     }
   `);
 
@@ -109,6 +109,7 @@ const sketch = ({ context }) => {
     return new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
+        color: { value: new THREE.Color("black") },
         texture1: { type: "t", value: texture },
       },
       extensions: {
@@ -122,7 +123,6 @@ const sketch = ({ context }) => {
 
   // Create a mesh
   const mesh = new THREE.Mesh(geometry, material);
-  console.log(material);
 
   // Add it to the scene
   scene.add(mesh);
