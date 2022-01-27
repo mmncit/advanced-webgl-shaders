@@ -20,6 +20,6 @@
   "dependencies": {
     "canvas-sketch": "^0.7.3",
     "glsl-noise": "0.0.0",
-    "three": "^0.115.0"
+    "three": "^0.137.0"
   }
 }
